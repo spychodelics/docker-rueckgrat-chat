@@ -3,11 +3,11 @@ Docker Container  for rueckgrat chat app
 
 Git clone
 
-docker build -t rueckgrat .
+docker build -t docker-rueckgrat-chat .
 
 baut container
 
-docker run -p 3001:3001 -it rueckgrat
+docker run --rm -p 3001:3001 docker-rueckgrat-chat
 
 führt container aus
 
@@ -15,9 +15,9 @@ führt container aus
 
 https://localhost:3001 
 
-Dauer 10 sek, dann Zertifitkatausnahme bestätigen 
+Dauert ein wenig (5-10 sek), dann Zertifitkatausnahme im Browser bestätigen 
 
-Rechtsklick auf den schwarzen Bildschirm, xterm starten
+xterm startet automatisch, rechtsklick auf den schwarzen Bildschirm, xterm starten
 
 
 
