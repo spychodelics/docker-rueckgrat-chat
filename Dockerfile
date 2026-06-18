@@ -18,7 +18,7 @@ RUN apt-get update && \
 RUN mkdir -p /rueckgrat && \
     git clone https://github.com/tanzfisch/Rueckgrat.git /rueckgrat || (echo "Clone fehlgeschlagen" && exit 1)
 
-RUN /rueckgrat/install.sh && \
+#RUN /rueckgrat/install.sh && \
 
 COPY /root /
 EXPOSE 3001
