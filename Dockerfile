@@ -15,12 +15,11 @@ RUN apt-get update && \
     /var/tmp/* \
     /tmp/*
 
-RUN mkdir -p /rueckgrat && \
-    git clone https://github.com/tanzfisch/Rueckgrat.git /rueckgrat || (echo "Clone fehlgeschlagen" && exit 1)
+RUN git clone -b 'feature/#73_improving_installer' https://github.com/tanzfisch/Rueckgrat.git || (echo "Clone fehlgeschlagen" && exit 1)
 
-#RUN /rueckgrat/install.sh && \
+RUN cd Rueckgrat && ./install.sh --chat_only -y
 
 COPY /root /
 EXPOSE 3001
 
-VOLUME /config
+VOLUME /config 
