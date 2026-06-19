@@ -1,4 +1,4 @@
-# docker-rueckgrat-chat
+## docker-rueckgrat-chat
 Docker Container  for rueckgrat chat app
 
 Git clone
