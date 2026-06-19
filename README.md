@@ -22,9 +22,10 @@ xterm available with right click
 
 
 
-To use precompiled Dockerpackage (missing the caddy-root.crt) from Github Container Registry: 
+To use precompiled Dockerpackage (missing the caddy-root.crt) from Github Container Registry.
+Mount caddy-root.crt to /config/ssh/caddy-root.crt.
 
 docker pull ghcr.io/spychodelics/docker-rueckgrat-chat:latest
-docker run --rm -p 3001:3001 ghcr.io/spychodelics/docker-rueckgrat-chat:latest
+docker run --rm -v /path/to/local/ssh/caddy-root.crt:/config/ssh/caddy-root.crt -p 3001:3001 ghcr.io/spychodelics/docker-rueckgrat-chat:latest
 
-Mount caddy-root.crt to /config/.ssh/caddy-root.crt
+
