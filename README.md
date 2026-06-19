@@ -1,24 +1,30 @@
-## docker-rueckgrat-chat
+# docker-rueckgrat-chat
 Docker Container  for rueckgrat chat app
 
-Git clone
+Clone:
+git clone https://github.com/tanzfisch/Rueckgrat.git
 
-docker build -t docker-rueckgrat-chat .
+Build:
+cp ~/.ssh/caddy-root.crt . && docker build --no-cache --build-arg HUB_CERT=caddy-root.crt -t docker-rueckgrat-chat .
 
-baut container
-
+Run:
 docker run --rm -p 3001:3001 docker-rueckgrat-chat
-
-führt container aus
 
 ->
 
 https://localhost:3001 
 
-Dauert ein wenig (5-10 sek), dann Zertifitkatausnahme im Browser bestätigen 
+takes about 5-10 sec, accept "risks" in your Browser. 
 
-xterm startet automatisch, rechtsklick auf den schwarzen Bildschirm, xterm starten
+Application should autostart. 
+
+xterm available with right click
 
 
 
+To use precompiled Dockerpackage (missing the caddy-root.crt) from Github Container Registry: 
 
+docker pull ghcr.io/spychodelics/docker-rueckgrat-chat:latest
+docker run --rm -p 3001:3001 ghcr.io/spychodelics/docker-rueckgrat-chat:latest
+
+Mount caddy-root.crt to /config/.ssh/caddy-root.crt
