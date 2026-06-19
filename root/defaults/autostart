@@ -1,2 +1,3 @@
 #!/bin/bash
-/Rueckgrat/chat/run.sh
+cd /Rueckgrat/chat/
+bash run.sh
