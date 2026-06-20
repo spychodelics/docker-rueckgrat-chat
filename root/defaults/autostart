@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /Rueckgrat/chat/
-bash run.sh
+bash run.sh > /proc/1/fd/1 2>&1

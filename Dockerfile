@@ -15,9 +15,9 @@ RUN apt-get update && \
     /var/tmp/* \
     /tmp/*
 
-RUN git clone -b 'feature/#73_improving_installer' https://github.com/tanzfisch/Rueckgrat.git || (echo "Clone fehlgeschlagen" && exit 1)
+RUN git clone -b 'feature/#75_docker_for_chat' https://github.com/tanzfisch/Rueckgrat.git || (echo "Clone fehlgeschlagen" && exit 1)
 
-RUN cd Rueckgrat && ./install.sh --chat_only -y
+RUN cd Rueckgrat && ./install.sh -y --chat-only
 
 COPY /root /
 EXPOSE 3001
